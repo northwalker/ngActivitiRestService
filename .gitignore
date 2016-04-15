@@ -1,0 +1,39 @@
+### Northwalker .gitignore template
+
+### IntelliJ project files
+.idea
+*.iml
+out
+gen
+
+### OSX template
+.DS_Store
+
+### Node template
+node_modules
+.npm
+
+### Bower
+bower_components
+
+### Logs
+logs
+*.log
+npm-debug.log*
+
+### Other folders
+development
+release
+tmp
+.tmp
+
+### Others
+*.csv
+*.xml
+*.dat
+*.out
+*.sublime*
+*.swo
+*.swp
+*.tgz
+*.zip
