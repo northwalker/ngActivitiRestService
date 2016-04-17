@@ -1,14 +1,22 @@
 
 
 /* global require */
-
 var gulp = require('gulp');
 var $ = require('gulp-load-plugins')();
+
+/* gulp-load-plugins ($.xxx) instead of below */
+// var uglify = require('gulp-uglify');
+// var concat = require('gulp-concat');
+// var clean = require('gulp-clean');
+// var notify = require('gulp-notify');
 
 var del = require('del');
 
 
-
+gulp.task('clean', function () {
+  return gulp.src(['dist/'], { read: false })
+    .pipe($.clean());
+});
 
 gulp.task('eslint', function () {
   return gulp.src('src/**/*.js')
@@ -28,14 +36,17 @@ gulp.task('jshint', function () {
 
 
 gulp.task('uglify-script', function () {
-  gulp.src('./src/**/*.js')                 // 指定要處理的原始 JavaScript 檔案目錄
-    .pipe($.uglify())                       // 將 JavaScript 做最小化
-    .pipe(gulp.dest('dist/ng-activiti-rest-service.min.js'));  // 指定最小化後的 JavaScript 檔案目錄
+  gulp.src('./src/**/*.js')
+    .pipe($.concat('ng-activiti-rest-service.min.js'))
+    .pipe($.uglify())
+    .pipe(gulp.dest('./'))
+    .pipe($.notify({ message: 'Task "uglify-script" complete.' }));
 });
 
 gulp.task('non-uglify-script', function () {
-  gulp.src('./src/**/*.js')                             // 指定要處理的原始 JavaScript 檔案目錄
-    .pipe(gulp.dest('dist/ng-activiti-rest-service.js'));  // 指定最小化後的 JavaScript 檔案目錄
+  gulp.src('./src/**/*.js')
+    .pipe($.concat('ng-activiti-rest-service.js'))
+    .pipe(gulp.dest('./'));
 });
 
 gulp.task('default', [
@@ -45,5 +56,5 @@ gulp.task('default', [
 ]);
 
 gulp.task('watch', function () {
-  gulp.watch('./src/**/*', ['default']);
+  // gulp.watch('./src/**/*.js', ['default']);
 });
