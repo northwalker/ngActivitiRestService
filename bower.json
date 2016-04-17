@@ -1,0 +1,26 @@
+{
+  "name": "ng-activiti-rest-service",
+  "description": "angular service for activiti rest API.",
+  "main": "./ng-activiti-rest-services.js",
+  "authors": [
+    "Northwalker"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "angular",
+    "activiti"
+  ],
+  "homepage": "https://github.com/northwalker/ngActivitiRestService",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "~2.2.1",
+    "angular": "1.4.8",
+    "angular-resource": "1.4.8"
+  }
+}
