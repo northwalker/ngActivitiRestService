@@ -5,10 +5,11 @@ var gulp = require('gulp');
 var $ = require('gulp-load-plugins')();
 
 /* gulp-load-plugins ($.xxx) instead of below */
-// var uglify = require('gulp-uglify');
-// var concat = require('gulp-concat');
-// var clean = require('gulp-clean');
-// var notify = require('gulp-notify');
+// var gulpUglify = require('gulp-uglify');
+// var gulpConcat = require('gulp-concat');
+// var gulpClean = require('gulp-clean');
+// var gulpSize = require('gulp-size');
+// var gulpNotify = require('gulp-notify');
 
 var del = require('del');
 
@@ -37,8 +38,12 @@ gulp.task('jshint', function () {
 
 gulp.task('uglify-script', function () {
   gulp.src('./src/**/*.js')
+    // .pipe($.newer('./'))
+    // .pipe($.sourcemaps.init())
     .pipe($.concat('ng-activiti-rest-service.min.js'))
     .pipe($.uglify())
+    .pipe($.size({title:'uglify-script', showFiles:true})) // options: {title:'Size of ', showFiles:true}
+    // .pipe($.sourcemaps.write())
     .pipe(gulp.dest('./'))
     .pipe($.notify({ message: 'Task "uglify-script" complete.' }));
 });
@@ -46,6 +51,7 @@ gulp.task('uglify-script', function () {
 gulp.task('non-uglify-script', function () {
   gulp.src('./src/**/*.js')
     .pipe($.concat('ng-activiti-rest-service.js'))
+    .pipe($.size({title:'non-uglify-script', showFiles:true})) // options: {title:'Task non-uglify-script', showFiles:true}
     .pipe(gulp.dest('./'));
 });
 

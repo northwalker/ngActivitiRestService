@@ -1,2 +1,2 @@
 # ngActivitiRestService
-angular service for activiti rest API.
+Angular service for activiti rest API.
