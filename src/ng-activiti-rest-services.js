@@ -119,34 +119,34 @@
         {'deploymentId': '@deploymentId'},
         {
           'listDeployments': {
-            'method': 'GET',
-            'url': urlBase + '/repository/deployments'
+            method: 'GET',
+            url: urlBase + '/repository/deployments'
           },
           'getDeployment': {
-            'method': 'GET',
-            'url': urlBase + '/repository/deployments/:deploymentId'
+            method: 'GET',
+            url: urlBase + '/repository/deployments/:deploymentId'
           },
           'createNewDeployment': {
-            'method': 'POST',
-            'url': urlBase + '/repository/deployments'
+            method: 'POST',
+            url: urlBase + '/repository/deployments'
           },
           'deleteDeployment': {
-            'method': 'DELETE',
-            'url': urlBase + '/repository/deployments/:deploymentId'
+            method: 'DELETE',
+            url: urlBase + '/repository/deployments/:deploymentId'
           },
           'listResourcesInDeployment': {
-            'method': 'GET',
-            'url': urlBase + '/repository/deployments/:deploymentId/resources'
+            method: 'GET',
+            url: urlBase + '/repository/deployments/:deploymentId/resources'
           },
           'getDeploymentResources': {
-            'method': 'GET',
-            'param': {resourceId: '@resourceId'},
-            'url': urlBase + '/repository/deployments/:deploymentId/resources/:resourceId'
+            method: 'GET',
+            params: {resourceId: '@resourceId'},
+            url: urlBase + '/repository/deployments/:deploymentId/resources/:resourceId'
           },
           'getDeploymentResourcesContent': {
-            'method': 'GET',
-            'param': {resourceId: '@resourceId'},
-            'url': urlBase + '/repository/deployments/:deploymentId/resourcedata/:resourceId'
+            method: 'GET',
+            params: {resourceId: '@resourceId'},
+            url: urlBase + '/repository/deployments/:deploymentId/resourcedata/:resourceId'
           }
 
         }
@@ -168,49 +168,49 @@
         {'processDefinitionId': '@processDefinitionId'},
         {
           "listProcessDefinitions": {
-            'method': 'GET',
-            'url': urlBase + '/repository/process-definitions'
+            method: 'GET',
+            url: urlBase + '/repository/process-definitions'
           },
           "getProcessDefinitions": {
-            'method': 'GET',
-            'url': urlBase + '/repository/process-definitions/:processDefinitionId'
+            method: 'GET',
+            url: urlBase + '/repository/process-definitions/:processDefinitionId'
           },
           "UpdateCategoryForProcessDefinition": {
-            'method': 'PUT',
-            'url': urlBase + '/repository/process-definitions'
+            method: 'PUT',
+            url: urlBase + '/repository/process-definitions'
           },
           "GetProcessDefinitionResourceContent": {
-            'method': 'GET',
-            'url': urlBase + "/repository/process-definitions/:processDefinitionId/resourcedata"
+            method: 'GET',
+            url: urlBase + "/repository/process-definitions/:processDefinitionId/resourcedata"
           },
           "GetProcessDefinitionBPMNModel": {
-            'method': 'GET',
-            'url': urlBase + "/repository/process-definitions/:processDefinitionId/model"
+            method: 'GET',
+            url: urlBase + "/repository/process-definitions/:processDefinitionId/model"
           },
           "suspendProcessDefinition": {
-            'method': 'PUT',
-            'url': urlBase + "/repository/process-definitions/:processDefinitionId"
+            method: 'PUT',
+            url: urlBase + "/repository/process-definitions/:processDefinitionId"
           },
           "activateProcessDefinition": {
-            'method': 'PUT',
-            'url': urlBase + "/repository/process-definitions/:processDefinitionId"
+            method: 'PUT',
+            url: urlBase + "/repository/process-definitions/:processDefinitionId"
           },
           "getAllCandidateStartersForProcessDefinition": {
-            'method': 'GET',
-            'url': urlBase + "/repository/process-definitions/:processDefinitionId/identitylinks"
+            method: 'GET',
+            url: urlBase + "/repository/process-definitions/:processDefinitionId/identitylinks"
           },
           "addCandidateStartersToProcessDefinition": {
-            'method': 'POST',
-            'url': urlBase + "/repository/process-definitions/:processDefinitionId/identitylinks"
+            method: 'POST',
+            url: urlBase + "/repository/process-definitions/:processDefinitionId/identitylinks"
           },
           "deleteCandidateStartersFromProcessDefinition": {
-            'method': 'DELETE',
-            'url': urlBase + "/repository/process-definitions/:processDefinitionId/identitylinks"
+            method: 'DELETE',
+            url: urlBase + "/repository/process-definitions/:processDefinitionId/identitylinks"
           },
           "getCandidateStartersFromProcessDefinition": {
-            'method': 'GET',
-            'param': {family: '@family', identityId: '@identityId'},
-            'url': urlBase + "/repository/process-definitions/:processDefinitionId/identitylinks/:family/:identityId"
+            method: 'GET',
+            params: {family: '@family', identityId: '@identityId'},
+            url: urlBase + "/repository/process-definitions/:processDefinitionId/identitylinks/:family/:identityId"
           }
 
         }
@@ -241,75 +241,75 @@
         {'processInstanceId': '@processInstanceId'},
         {
           'getProcessInstance': {
-            'method': 'GET',
-            'url': urlBase + 'runtime/process-instances/:processInstanceId'
+            method: 'GET',
+            url: urlBase + 'runtime/process-instances/:processInstanceId'
           },
           'deleteProcessInstance': {
-            'method': 'DELETE',
-            'url': urlBase + 'runtime/process-instances/:processInstanceId'
+            method: 'DELETE',
+            url: urlBase + 'runtime/process-instances/:processInstanceId'
           },
           'activateProcessInstance': {
-            'method': 'PUT',
-            'url': urlBase + 'runtime/process-instances/:processInstanceId'
+            method: 'PUT',
+            url: urlBase + 'runtime/process-instances/:processInstanceId'
           },
           'startProcessInstance': {
-            'method': 'POST',
-            'url': urlBase + 'runtime/process-instances/:processInstanceId'
+            method: 'POST',
+            url: urlBase + 'runtime/process-instances/:processInstanceId'
           },
           'listProcessInstance': {
-            'method': 'GET',
-            'url': urlBase + 'runtime/process-instances'
+            method: 'GET',
+            url: urlBase + 'runtime/process-instances'
           },
           'queryProcessInstance': {
-            'method': 'POST',
-            'url': urlBase + 'query/process-instances'
+            method: 'POST',
+            url: urlBase + 'query/process-instances'
           },
           'getDiagramForProcessInstance': {
-            'method': 'GET',
-            'url': urlBase + 'runtime/process-instances/:processInstanceId/diagram'
+            method: 'GET',
+            url: urlBase + 'runtime/process-instances/:processInstanceId/diagram'
           },
           'getInvolvedForProcessInstance': {
-            'method': 'GET',
-            'url': urlBase + 'runtime/process-instances/:processInstanceId/identitylinks'
+            method: 'GET',
+            url: urlBase + 'runtime/process-instances/:processInstanceId/identitylinks'
           },
           'addInvolvedForProcessInstance': {
-            'method': 'POST',
-            'url': urlBase + 'runtime/process-instances/:processInstanceId/identitylinks'
+            method: 'POST',
+            url: urlBase + 'runtime/process-instances/:processInstanceId/identitylinks'
           },
           'removeInvolvedForProcessInstance': {
-            'method': 'DELETE',
-            'param': {userId: '@userId', type: '@type'},
-            'url': urlBase + 'runtime/process-instances/:processInstanceId/identitylinks/users/:userId/:type'
+            method: 'DELETE',
+            params: {userId: '@userId', type: '@type'},
+            url: urlBase + 'runtime/process-instances/:processInstanceId/identitylinks/users/:userId/:type'
           },
           'listVariablesForProcessInstance': {
-            'method': 'GET',
-            'url': urlBase + 'runtime/process-instances/:processInstanceId/variables'
+            method: 'GET',
+            url: urlBase + 'runtime/process-instances/:processInstanceId/variables'
           },
           'getVariableForProcessInstance': {
-            'method': 'GET',
-            'param': {variableName: '@variableName'},
-            'url': urlBase + 'runtime/process-instances/:processInstanceId/variables/:variableName'
+            method: 'GET',
+            params: {variableName: '@variableName'},
+            url: urlBase + 'runtime/process-instances/:processInstanceId/variables/:variableName'
           },
           'createVariablesForProcessInstance': {
-            'method': 'POST',
-            'url': urlBase + 'runtime/process-instances/:processInstanceId/variables'
+            method: 'POST',
+            url: urlBase + 'runtime/process-instances/:processInstanceId/variables'
           },
           'updateVariablesForProcessInstance': {
-            'method': 'PUT',
-            'url': urlBase + 'runtime/process-instances/:processInstanceId/variables'
+            method: 'PUT',
+            url: urlBase + 'runtime/process-instances/:processInstanceId/variables'
           },
           'updateSingleVariableForProcessInstance': {
-            'method': 'PUT',
-            'param': {variableName: '@variableName'},
-            'url': urlBase + 'runtime/process-instances/:processInstanceId/variables/:variableName'
+            method: 'PUT',
+            params: {variableName: '@variableName'},
+            url: urlBase + 'runtime/process-instances/:processInstanceId/variables/:variableName'
           },
           'createBinaryVariablesOnProcessInstance': {
-            'method': 'POST',
-            'url': urlBase + 'runtime/process-instances/:processInstanceId/variables'
+            method: 'POST',
+            url: urlBase + 'runtime/process-instances/:processInstanceId/variables'
           },
           'updateBinaryVariablesOnProcessInstance': {
-            'method': 'PUT',
-            'url': urlBase + 'runtime/process-instances/:processInstanceId/variables'
+            method: 'PUT',
+            url: urlBase + 'runtime/process-instances/:processInstanceId/variables'
           }
         }
       );
@@ -322,55 +322,56 @@
         {'executionId': '@executionId'},
         {
           'getExecution': {
-            'method': 'GET',
-            'url': urlBase + 'runtime/executions/:executionId'
+            method: 'GET',
+            url: urlBase + 'runtime/executions/:executionId'
           },
           'executeExecution': {
-            'method': 'PUT',
-            'url': urlBase + 'runtime/executions/:executionId'
+            method: 'PUT',
+            url: urlBase + 'runtime/executions/:executionId'
           },
           'getActivesInExecution': {
-            'method': 'GET',
-            'url': urlBase + 'runtime/executions/:executionId/activities'
+            method: 'GET',
+            url: urlBase + 'runtime/executions/:executionId/activities'
           },
           'listExecutions': {
-            'method': 'GET',
-            'url': urlBase + 'runtime/executions'
+            method: 'GET',
+            url: urlBase + 'runtime/executions'
           },
           'queryExecutions': {
-            'method': 'POST',
-            'url': urlBase + 'runtime/executions'
+            method: 'POST',
+            url: urlBase + 'runtime/executions'
           },
           'listVariablesForExecutions': {
-            'method': 'GET',
-            'param': {scope: '@scope'},
-            'url': urlBase + 'runtime/executions/:executionId/variables?scope=:scope'
+            method: 'GET',
+            url: urlBase + 'runtime/executions/:executionId/variables'
+            // GET runtime/executions/:executionId/:variableName?scope=:scope
           },
           'getVariablesForExecutions': {
-            'method': 'GET',
-            'param': {variableName: '@variableName', scope: '@scope'},
-            'url': urlBase + 'runtime/executions/:executionId/:variableName?scope=:scope'
+            method: 'GET',
+            params: {variableName: '@variableName'},
+            url: urlBase + 'runtime/executions/:executionId/variables/:variableName'
+            // GET runtime/executions/:executionId/:variableName?scope=:scope
           },
           'createVariablesOnExecutions': {
-            'method': 'POST',
-            'url': urlBase + 'runtime/executions/:executionId/variables'
+            method: 'POST',
+            url: urlBase + 'runtime/executions/:executionId/variables'
           },
           'updateVariablesOnExecutions': {
-            'method': 'PUT',
-            'url': urlBase + 'runtime/executions/:executionId/variables'
+            method: 'PUT',
+            url: urlBase + 'runtime/executions/:executionId/variables'
           },
           'updateVariableOnExecutions': {
-            'method': 'PUT',
-            'param': {variableName: '@variableName'},
-            'url': urlBase + 'runtime/executions/:executionId/variables/:variableName'
+            method: 'PUT',
+            params: {variableName: '@variableName'},
+            url: urlBase + 'runtime/executions/:executionId/variables/:variableName'
           },
           'createBinaryVariablesOnExecutions': {
-            'method': 'POST',
-            'url': urlBase + 'runtime/executions/:executionId/variables'
+            method: 'POST',
+            url: urlBase + 'runtime/executions/:executionId/variables'
           },
           'updateBinaryVariablesOnExecutions': {
-            'method': 'PUt',
-            'url': urlBase + 'runtime/executions/:executionId/variables'
+            method: 'PUt',
+            url: urlBase + 'runtime/executions/:executionId/variables'
           }
         }
       );
@@ -380,42 +381,144 @@
     }])
     .factory('TaskService', ['$resource', function ($resource) {
       var R = $resource(
-        urlBase + "/repository/tasks/:id",
-        {'id': '@id'},
+        urlBase + "/repository/tasks/:taskId",
+        {'taskId': '@taskId'},
         {
-          'query': {
-            'method': 'POST',
-            'url': urlBase + 'query/historic-process-instances/'
+          'getTask': {
+            method: 'GET',
+            url: urlBase + 'runtime/tasks/:taskId'
           },
-          'getBinaryDataForHistoric': {
-            'method': 'GET',
-            'param': {variableName: '@variableName'},
-            'url': urlBase + 'history/historic-process-instances/:processInstanceId/variables/:variableName/data'
+          'listTasks': {
+            method: 'GET',
+            url: urlBase + 'runtime/tasks'
           },
-          'getHistoricTask': {
-            'method': 'GET',
-            'url': urlBase + 'history/historic-task-instances'
+          'updateTask': {
+            method: 'PUT',
+            url: urlBase + 'runtime/tasks/:taskId'
           },
-          'getSingleHistoricTask': {
-            'method': 'GET',
-            'param': {taskId: '@taskId'},
-            'url': urlBase + 'history/historic-task-instances/:taskId'
+          'queryTasks': {
+            method: 'POST',
+            url: urlBase + 'query/tasks'
           },
-          'queryHistoricTask': {
-            'method': 'POST',
-            'url': urlBase + 'query/historic-task-instances/'
+          'deleteTask': {
+            method: 'DELETE',
+            url: urlBase + 'runtime/tasks/:taskId'
           },
-          'deleteHistoricTask': {
-            'method': 'DELETE',
-            'param': {taskId: '@taskId'},
-            'url': urlBase + 'history/historic-task-instances/:taskId'
-          }
+          'getAllVariablesForTask': {
+            method: 'DELETE',
+            url: urlBase + 'runtime/tasks/:taskId/variables'
+          },
+          'getAllVariableFromTask': {
+            method: 'DELETE',
+            params: {variableName: '@variableName'},
+            url: urlBase + 'runtime/tasks/:taskId/variables/:variableName'
+          },
 
+          'getBinaryDataForVariable': {
+            method: 'GET',
+            params: {variableName: '@variableName'},
+            url: urlBase + 'runtime/tasks/:taskId/variables/:variableName/data'
+          },
+          'createVariableOnTask': {
+            method: 'POST',
+            url: urlBase + 'runtime/tasks/:taskId/variables'
+          },
+          'createBinaryDataOnTask': {
+            method: 'POST',
+            url: urlBase + 'runtime/tasks/:taskId/variables'
+          },
+          'updateVariableOnTask': {
+            method: 'PUT',
+            params: {variableName: '@variableName'},
+            url: urlBase + 'runtime/tasks/:taskId/variables/:variableName'
+          },
+          'updateBinaryDataOnOnTask': {
+            method: 'PUT',
+            params: {variableName: '@variableName'},
+            url: urlBase + 'runtime/tasks/:taskId/variables/:variableName'
+          },
+          'deleteVariableOnTask': {
+            method: 'DELETE',
+            params: {variableName: '@variableName'},
+            url: urlBase + 'runtime/tasks/:taskId/variables/:variableName'
+          },
+          'deleteAllLocalVariableOnTask': {
+            method: 'DELETE',
+            url: urlBase + 'runtime/tasks/:taskId/variables'
+          },
+          'getAllIdentityLinksForTask': {
+            method: 'GET',
+            url: urlBase + 'runtime/tasks/:taskId/identitylinks'
+          },
+          'getAllIdentityLinksForTaskUsers': {
+            method: 'GET',
+            url: urlBase + 'runtime/tasks/:taskId/identitylinks/users'
+          },
+          'getAllIdentityLinksForTaskGroups': {
+            method: 'GET',
+            url: urlBase + 'runtime/tasks/:taskId/identitylinks/groups'
+          },
+          'getSingleIdentityLinksOnTask': {
+            method: 'GET',
+            params: {family: '@family', identityId: '@identityId', type: '@type'},
+            url: urlBase + 'runtime/tasks/:taskId/identitylinks/:family/:identityId/:type'
+          },
+          'createCommentOnTask': {
+            method: 'POST',
+            url: urlBase + 'runtime/tasks/:taskId/comments'
+          },
+          'getAllCommentsOnTask': {
+            method: 'GET',
+            url: urlBase + 'runtime/tasks/:taskId/comments'
+          },
+          'getCommentOnTask': {
+            method: 'GET',
+            params: {commentId: '@commentId'},
+            url: urlBase + 'runtime/tasks/:taskId/comments/:commentId'
+          },
+          'deleteCommentOnTask': {
+            method: 'DELETE',
+            params: {commentId: '@commentId'},
+            url: urlBase + 'runtime/tasks/:taskId/comments/:commentId'
+          },
+          'getAllEventsOnTask': {
+            method: 'GET',
+            url: urlBase + 'runtime/tasks/:taskId/events'
+          },
+          'getEventOnTask': {
+            method: 'GET',
+            params: {eventId: '@eventId'},
+            url: urlBase + 'runtime/tasks/:taskId/events/:eventId'
+          },
+          'createAttachmentOnTask': {
+            method: 'POST',
+            url: urlBase + 'runtime/tasks/:taskId/attachments'
+          },
+          'createAttachmentOnTaskWithAttachedFile': {
+            method: 'POST',
+            url: urlBase + 'runtime/tasks/:taskId/attachments'
+          },
+          'getAllAttachmentsOnTask': {
+            method: 'GET',
+            url: urlBase + 'runtime/tasks/:taskId/attachments'
+          },
+          'getAttachmentOnTask': {
+            method: 'GET',
+            params: {attachmentId: '@attachmentId'},
+            url: urlBase + 'runtime/tasks/:taskId/attachments/:attachmentId'
+          },
+          'getContentForAttachment': {
+            method: 'GET',
+            params: {attachmentId: '@attachmentId'},
+            url: urlBase + 'runtime/tasks/:taskId/attachments/:attachmentId/content'
+          },
+          'deleteAttachmentOnTask': {
+            method: 'DELETE',
+            params: {attachmentId: '@attachmentId'},
+            url: urlBase + 'runtime/tasks/:taskId/attachments/:attachmentId'
+          }
         }
       );
-
-      R["destroyById"] = R["deleteById"];
-      R["removeById"] = R["deleteById"];
 
       return R;
 
@@ -423,49 +526,229 @@
     .factory('HistoryService', ['$resource', function ($resource) {
 
       var R = $resource(
-        urlBase + "/history/:id",
-        {'id': '@id'},
+        urlBase + "/history/historic-process-instances/:processInstanceId",
+        {'processInstanceId': '@processInstanceId'},
+        {}
+      );
+
+      return R;
+
+    }])
+    .factory('FormsService', ['$resource', function ($resource) {
+
+      var R = $resource(
+        urlBase + "/form/form-data",
+        {},
         {
+          'getFormData': {
+            method: 'GET',
+            url: urlBase + "/form/form-data"
+          },
+          'submitTaskFormData': {
+            method: 'POST',
+            url: urlBase + "/form/form-data"
+          }
+        }
+      );
 
-          'query': {
-            'method': 'POST',
-            'url': urlBase + 'query/tasks'
-          },
+      return R;
 
-          'execute': {
-            'method': 'post',
-            'url': urlBase + 'runtime/tasks/:id'
+    }])
+    .factory('DatabaseTablesService', ['$resource', function ($resource) {
+
+      var R = $resource(
+        urlBase + "/management/tables",
+        {tableName: '@tableName'},
+        {
+          'listOfTables': {
+            method: 'GET',
+            url: urlBase + "/management/tables"
           },
-          'getVariablesForATask': {
-            'method': 'GET',
-            'url': urlBase + 'runtime/tasks/:id/variables'
+          'getSingleTable': {
+            method: 'GET',
+            params: {tableName: '@tableName'},
+            url: urlBase + "/management/tables/:tableName"
           },
-          'getVariablesFromTask': {
-            'method': 'GET',
-            'param': {variableName: '@variableName'},
-            'url': urlBase + 'runtime/tasks/:id/variables/:variableName'
+          'getColumnInfoForSingleTable': {
+            method: 'GET',
+            params: {tableName: '@tableName'},
+            url: urlBase + "/management/tables/:tableName/columns"
           },
-          'getBinaryDataForVariable': {
-            'method': 'GET',
-            'param': {variableName: '@variableName'},
-            'url': urlBase + 'runtime/tasks/:id/variables/:variableName/data'
+          'getRowDataForSingleTable': {
+            method: 'GET',
+            params: {tableName: '@tableName'},
+            url: urlBase + "/management/tables/:tableName/data"
+          }
+        }
+      );
+
+      return R;
+
+    }])
+    .factory('EngineService', ['$resource', function ($resource) {
+
+      var R = $resource(
+        urlBase + "/management/engine",
+        {},
+        {
+          'getEngineProperties': {
+            method: 'GET',
+            url: urlBase + "/management/properties"
           },
-          'createVariableOnTask': {
-            'method': 'POST',
-            'url': urlBase + 'runtime/tasks/:id/variables'
+          'getEngineInfo': {
+            method: 'GET',
+            url: urlBase + "/management/engine"
           }
 
         }
       );
 
-      R["destroyById"] = R["deleteById"];
-      R["removeById"] = R["deleteById"];
+      return R;
+
+    }])
+    .factory('JobsService', ['$resource', function ($resource) {
+
+      var R = $resource(
+        urlBase + "/management/jobs/:jobId",
+        {jobId: '@jobId'},
+        {
+          'getJob': {
+            method: 'GET',
+            url: urlBase + "/management/jobs/:jobId"
+          },
+          'deleteJob': {
+            method: 'DELETE',
+            url: urlBase + "/management/jobs/:jobId"
+          },
+          'getExceptionStacktraceForJob': {
+            method: 'GET',
+            url: urlBase + "/management/jobs/:jobId/exception-stacktrace"
+          },
+          'listJobs': {
+            method: 'GET',
+            url: urlBase + "/management/jobs"
+          }
+        }
+      );
+
+      return R;
+
+    }])
+    .factory('UsersService', ['$resource', function ($resource) {
+
+      var R = $resource(
+        urlBase + "/identity/users/:userId",
+        {userId: '@userId'},
+        {
+          'getUser': {
+            method: 'GET',
+            url: urlBase + "/identity/users/:userId"
+          },
+          'listUsers': {
+            method: 'GET',
+            url: urlBase + "/identity/users"
+          },
+          'updateUser': {
+            method: 'PUT',
+            url: urlBase + "/identity/users/:userId"
+          },
+          'createUser': {
+            method: 'POST',
+            url: urlBase + "/identity/users"
+          },
+          'deleteUser': {
+            method: 'DELETE',
+            url: urlBase + "/identity/users/:userId"
+          },
+          'getUserPicture': {
+            method: 'GET',
+            url: urlBase + "/identity/users/:userId/picture"
+          },
+          'updateUserPicture': {
+            method: 'PUT',
+            /* strange method on userguid: http://activiti.org/userguide/#_updating_a_user_s_picture,
+             * update from 'GET' to 'PUT' */
+            url: urlBase + "/identity/users/:userId/picture"
+          },
+          'listUserInfo': {
+            method: 'GET',
+            /* strange method on userguid: http://activiti.org/userguide/#_list_a_user_s_info,
+             * update from 'PUT' to 'GET' */
+            url: urlBase + "/identity/users/:userId/info"
+          },
+          'getUserInfo': {
+            method: 'GET',
+            params: {key: '@key'},
+            url: urlBase + "/identity/users/:userId/info/:key"
+          },
+          'updateUserInfo': {
+            method: 'PUT',
+            params: {key: '@key'},
+            url: urlBase + "/identity/users/:userId/info/:key"
+          },
+          'createUserInfoEntry': {
+            method: 'POST',
+            url: urlBase + "/identity/users/:userId/info"
+          },
+          'deleteUserInfo': {
+            method: 'DELETE',
+            params: {key: '@key'},
+            url: urlBase + "/identity/users/:userId/info/:key"
+          }
+        }
+      );
+
+      return R;
+
+    }])
+    .factory('GroupsService', ['$resource', function ($resource) {
+
+      var R = $resource(
+        urlBase + "/identity/groups/:groupId",
+        {groupId: '@groupId'},
+        {
+          'getGroup':{
+            method: 'GET',
+            url: urlBase + "/identity/groups/:groupId"
+          },
+          'listGroup':{
+            method: 'GET',
+            url: urlBase + "/identity/groups"
+          },
+          'updateGroup':{
+            method: 'PUT',
+            url: urlBase + "/identity/groups/:groupId"
+          },
+          'createGroup':{
+            method: 'POSt',
+            url: urlBase + "/identity/groups"
+          },
+          'deleteGroup':{
+            method: 'DELETE',
+            url: urlBase + "/identity/groups/:groupId"
+          },
+          'getMemberInGroup':{
+            method: 'GET',
+            url: urlBase + "/identity/users"
+            //GET identity/users?memberOfGroup=sales
+          },
+          'addMemberToGroup':{
+            method: 'POST',
+            url: urlBase + "/identity/groups/:groupId/members"
+          },
+          'deleteMemberFromGroup':{
+            method: 'DELETE',
+            params: {userId: '@userId'},
+            url: urlBase + "/identity/groups/:groupId/members/:userId"
+          }
+        }
+      );
 
       return R;
 
     }]);
 
-  // TODO complete other methods
+  // TODO complete other methods: History
 
 
 })(window, window.angular);
