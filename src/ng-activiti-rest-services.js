@@ -527,8 +527,109 @@
 
       var R = $resource(
         urlBase + "/history/historic-process-instances/:processInstanceId",
-        {'processInstanceId': '@processInstanceId'},
-        {}
+        {'processInstanceId': '@processInstanceId', taskId: '@taskId'},
+        {
+          'getHistoricProcessInstance': {
+            method: 'GET',
+            url: urlBase + "/history/historic-process-instances/:processInstanceId"
+          },
+          'listHistoricProcessInstances': {
+            method: 'GET',
+            url: urlBase + "/history/historic-process-instances"
+          },
+          'queryHistoricProcessInstances': {
+            method: 'POST',
+            url: urlBase + "/history/historic-process-instances"
+          },
+          'deleteHistoricProcessInstances': {
+            method: 'DELETE',
+            url: urlBase + "/history/historic-process-instances/:processInstanceId"
+          },
+          'getIdentitylinksOfHistoricProcessInstance': {
+            method: 'GET',
+            url: urlBase + "/history/historic-process-instances/:processInstanceId/identitylinks"
+          },
+          'getBinaryDataForHistoricProcessInstance': {
+            method: 'GET',
+            params: {variableName: '@variableName'},
+            url: urlBase + "/history/historic-process-instances/:processInstanceId/variables/:variableName/data"
+          },
+          'createNewCommentOnHistoricProcessInstance': {
+            method: 'POST',
+            url: urlBase + "/history/historic-process-instances/:processInstanceId/comments"
+          },
+          'getAllCommentsOnHistoricProcessInstance': {
+            method: 'GET',
+            url: urlBase + "/history/historic-process-instances/:processInstanceId/comments"
+          },
+          'getCommentOnHistoricProcessInstance': {
+            method: 'GET',
+            params: {commentId: '@commentId'},
+            url: urlBase + "/history/historic-process-instances/:processInstanceId/comments/:commentId"
+          },
+          'deleteCommentOnHistoricProcessInstance': {
+            method: 'DELETE',
+            params: {commentId: '@commentId'},
+            url: urlBase + "/history/historic-process-instances/:processInstanceId/comments/:commentId"
+          },
+          'getSingleHistoricTaskInstance': {
+            method: 'GET',
+            param: {taskId: '@taskId'},
+            url: urlBase + "/history/historic-task-instances/:taskId"
+          },
+          'getHistoricTaskInstances': {
+            method: 'GET',
+            url: urlBase + "/history/historic-task-instances"
+          },
+          'queryHistoricTaskInstances': {
+            method: 'POST',
+            url: urlBase + "/history/historic-task-instances"
+          },
+          'deleteSingleHistoricTaskInstance': {
+            method: 'DELETE',
+            param: {taskId: '@taskId'},
+            url: urlBase + "/history/historic-task-instances/:taskId"
+          },
+          'getIdentitylinksOfHistoricTaskInstance': {
+            method: 'GET',
+            param: {taskId: '@taskId'},
+            url: urlBase + "/history/historic-task-instances/:taskId/identitylinks"
+          },
+          'getBinaryDataForHistoricTaskInstance': {
+            method: 'GET',
+            param: {taskId: '@taskId', variableName: '@variableName'},
+            url: urlBase + "/history/historic-task-instances/:taskId/variables/:variableName/data"
+          },
+          'getHistoricActivityInstances': {
+            method: 'GET',
+            url: urlBase + "/history/historic-activity-instances"
+          },
+          'queryHistoricActivityInstances': {
+            method: 'POST',
+            url: urlBase + "/history/historic-activity-instances"
+          },
+          'listHistoricVariableInstances': {
+            method: 'GET',
+            url: urlBase + "/history/historic-variable-instances"
+          },
+          'queryHistoricVariableInstances': {
+            method: 'POST',
+            url: urlBase + "/history/historic-variable-instances"
+          },
+          'getHistoricDetail': {
+            method: 'GET',
+            url: urlBase + "/history/historic-detail"
+          },
+          'queryHistoricDetail': {
+            method: 'POST',
+            url: urlBase + "/history/historic-detail"
+          },
+          'getBinaryDataForHistoricDetail': {
+            method: 'GET',
+            params: {detailId: '@detailId'},
+            url: urlBase + "/history/historic-detail/:detailId/data"
+          },
+        }
       );
 
       return R;
@@ -707,36 +808,36 @@
         urlBase + "/identity/groups/:groupId",
         {groupId: '@groupId'},
         {
-          'getGroup':{
+          'getGroup': {
             method: 'GET',
             url: urlBase + "/identity/groups/:groupId"
           },
-          'listGroup':{
+          'listGroup': {
             method: 'GET',
             url: urlBase + "/identity/groups"
           },
-          'updateGroup':{
+          'updateGroup': {
             method: 'PUT',
             url: urlBase + "/identity/groups/:groupId"
           },
-          'createGroup':{
+          'createGroup': {
             method: 'POSt',
             url: urlBase + "/identity/groups"
           },
-          'deleteGroup':{
+          'deleteGroup': {
             method: 'DELETE',
             url: urlBase + "/identity/groups/:groupId"
           },
-          'getMemberInGroup':{
+          'getMemberInGroup': {
             method: 'GET',
             url: urlBase + "/identity/users"
             //GET identity/users?memberOfGroup=sales
           },
-          'addMemberToGroup':{
+          'addMemberToGroup': {
             method: 'POST',
             url: urlBase + "/identity/groups/:groupId/members"
           },
-          'deleteMemberFromGroup':{
+          'deleteMemberFromGroup': {
             method: 'DELETE',
             params: {userId: '@userId'},
             url: urlBase + "/identity/groups/:groupId/members/:userId"
@@ -747,8 +848,4 @@
       return R;
 
     }]);
-
-  // TODO complete other methods: History
-
-
 })(window, window.angular);
