@@ -23,13 +23,19 @@ $ bower install -S https://github.com/northwalker/ngActivitiRestService.git
 
 ## Configuration
 
-Include `ngActivitiRestServices` as a dependency on in your main Angular module
-
+Include `ngActivitiRestServices` as a dependency on in your main Angular module.
 ```js
 angular.module('myApp',['ngResource', 'ngActivitiRestServices'])
-.config(['ngActivitiResourceProvider', function(ngActivitiResourceProvider) {
+```
+
+Use `ngActivitiResourceProvider` to configure the service, also to set authentication for Activiti REST API request.
+```js
+angular.module('myApp')
+  .config(['ngActivitiResourceProvider', function(ngActivitiResourceProvider) {
     
     ngActivitiResourceProvider.setUrlBase('http://localhost:8080/activiti-webapp-rest');
+    
+    ngActivitiResourceProvider.setAuthHeader('authentication');
     
     ngActivitiResourceProvider.setActivitiAccount('kermit');
     
@@ -44,10 +50,11 @@ Inject the activiti service into any controller, service or directive where you 
 ```js
 angular
   .module('myApp')
-  .controller('MyController', function($scope, ProcessDefinitionsService) {
+  .controller('MyController', 
+  function($scope, ProcessDefinitionsService) {
    
-    ProcessDefinitionsService.listProcessDefinitions( function(list){
-      console.log(list);
+    ProcessDefinitionsService.listProcessDefinitions( function(processDefinitionList){
+      console.log(processDefinitionList);
     });
 });
 ```
