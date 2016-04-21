@@ -1,6 +1,6 @@
 {
   "name": "ng-activiti-rest-service",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "angular service for activiti rest API.",
   "main": "index.js",
   "scripts": {
