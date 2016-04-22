@@ -226,11 +226,41 @@
       var R = $resource(
         urlBase + '/repository/models/:modelId',
         {'modelId': '@modelId'},
-        {}
+        {
+          'listModels': {
+            method: 'GET',
+            url: urlBase + '/repository/models'
+          },
+          'getModel': {
+            method: 'GET',
+            url: urlBase + '/repository/models/:modelId'
+          },
+          'updateModel': {
+            method: 'PUT',
+            url: urlBase + '/repository/models/:modelId'
+          },
+          'createModel': {
+            method: 'POST',
+            url: urlBase + '/repository/models'
+          },
+          'deleteModel': {
+            method: 'DELETE',
+            url: urlBase + '/repository/models/:modelId'
+          },
+          'setEditorSourceForModel': {
+            method: 'PUT',
+            url: urlBase + '/repository/models/:modelId/source'
+          },
+          'getExtraEditorSourceForModel': {
+            method: 'GET',
+            url: urlBase + '/repository/models/:modelId/source-extra'
+          },
+          'setExtraEditorSourceForModel': {
+            method: 'PUT',
+            url: urlBase + '/repository/models/:modelId/source-extra'
+          }
+        }
       );
-
-      R['destroyById'] = R['deleteById'];
-      R['removeById'] = R['deleteById'];
 
       return R;
 
@@ -545,7 +575,7 @@
             method: 'DELETE',
             url: urlBase + '/history/historic-process-instances/:processInstanceId'
           },
-          'getIdentitylinksOfHistoricProcessInstance': {
+          'getIdentityLinksOfHistoricProcessInstance': {
             method: 'GET',
             url: urlBase + '/history/historic-process-instances/:processInstanceId/identitylinks'
           },
@@ -590,7 +620,7 @@
             param: {taskId: '@taskId'},
             url: urlBase + '/history/historic-task-instances/:taskId'
           },
-          'getIdentitylinksOfHistoricTaskInstance': {
+          'getIdentityLinksOfHistoricTaskInstance': {
             method: 'GET',
             param: {taskId: '@taskId'},
             url: urlBase + '/history/historic-task-instances/:taskId/identitylinks'
@@ -721,7 +751,7 @@
             method: 'DELETE',
             url: urlBase + '/management/jobs/:jobId'
           },
-          'getExceptionStacktraceForJob': {
+          'getExceptionStackTraceForJob': {
             method: 'GET',
             url: urlBase + '/management/jobs/:jobId/exception-stacktrace'
           },

@@ -58,6 +58,9 @@ angular
     });
 });
 ```
+## Methods
+
+See ngActivitiRestService [wiki](https://github.com/northwalker/ngActivitiRestService/wiki).
 
 ## Building and developing
 
