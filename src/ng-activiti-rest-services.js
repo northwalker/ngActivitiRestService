@@ -737,6 +737,23 @@
       return R;
 
     }])
+    .factory('RunTimeService', ['$resource', function ($resource) {
+
+      var R = $resource(
+        urlBase + '/runtime/signals',
+        {},
+        {
+          'runtimeSignal': {
+            method: 'POST',
+            url: urlBase + '/runtime/signals'
+          }
+
+        }
+      );
+
+      return R;
+
+    }])
     .factory('JobsService', ['$resource', function ($resource) {
 
       var R = $resource(
