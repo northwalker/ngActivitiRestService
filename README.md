@@ -60,7 +60,7 @@ angular
 ```
 ## Methods
 
-See ngActivitiRestService [wiki](https://github.com/northwalker/ngActivitiRestService/wiki).
+See ngActivitiRestService [wiki](https://github.com/northwalker/ngActivitiRestService/wiki) for details.
 
 ## Building and developing
 
